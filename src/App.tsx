@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import { useSelector } from 'react-redux';
 import './App.css';
+import { InitialStateType, setMaxValue, setStartValue, setValueFromLS, setViewMode } from './bll/counterReducer';
+import { IGlobalState } from './bll/store';
+import MainScreen from './components/MainScreen/MainScreen';
+import Settings from './components/Settings/Settings';
 
 function App() {
+
+  const counterState = useSelector<IGlobalState, InitialStateType>(state => state.counter)
+
+  const checkOptions = isNaN(counterState.startValue) || isNaN(counterState.maxValue)
+                                ? true
+                                : counterState.startValue === counterState.maxValue
+                                ? true
+                                : counterState.startValue > counterState.maxValue
+                                ? true
+                                : counterState.startValue < 0 || counterState.maxValue < 0
+                                ? true
+                                : false
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className='App'>
+      { counterState.viewMode 
+        ? <MainScreen checkOptions={checkOptions}/>
+        : <Settings checkOptions={checkOptions}/>
+      }
     </div>
+    
   );
 }
 

@@ -1,0 +1,17 @@
+.settings_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 400px;
+    width: 400px;
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/496ecb14589707.562865d064f9e.png');
+    border-radius: 3px;
+    border: 2px solid rgb(236, 129, 227);
+}

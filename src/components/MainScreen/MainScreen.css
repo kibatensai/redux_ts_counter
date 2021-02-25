@@ -1,0 +1,54 @@
+.screen_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.main_screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 400px;
+    width: 400px;
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/496ecb14589707.562865d064f9e.png');
+    border-radius: 3px;
+    border: 2px solid rgb(236, 129, 227);
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin: 10px;   
+    background-color: rgba(205, 205, 214, 0.507);
+    height: 25%;
+    width: 70%;
+    border: 2px solidrgb(236, 129, 227);
+    border-radius: 5px;
+    text-shadow: rgba(98, 0, 255, 0.719) 1px 0 10px;
+
+}
+
+.counter_end {
+    font-size: 50px;
+    color: rgb(194, 9, 9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(137, 98, 173);
+    margin: 10px;
+    height: 25%;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-shadow: rgba(0, 0, 0, 0.219) 3px 3px 3px;
+
+}
+
+.buttons {
+    display: inline-block;
+}
+

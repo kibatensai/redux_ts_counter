@@ -1,0 +1,35 @@
+.input_container {
+	color:#fff;	
+}
+
+.input {
+    font-size: 15px;
+    background: transparent;
+    box-sizing: border-box;
+    outline-style: none;
+    transition: box-shadow .7s;
+}
+
+.good_value_style label {
+    position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#fff;	
+	transition: all 0.5s ease-in-out;
+}
+
+.input:hover {
+    outline-style: none;
+    box-shadow: 5px 5px 3px rgba(110, 20, 212, 0.637);
+}
+
+.input:focus {
+    border: none;
+    outline-style: none;
+}
+
+.bad_value_style {
+    background-color: rgba(230, 13, 13, 0.767);
+    transition: 0.3s
+}
